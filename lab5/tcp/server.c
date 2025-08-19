@@ -16,7 +16,8 @@ int main()
     //Name the socket
     seraddr.sin_family = AF_INET;
     seraddr.sin_addr.s_addr = inet_addr("172.16.57.181");// **
-    seraddr.sin_port = htons(PORTNO);
+    seraddr.sin_port = htons(PORTNO); // Port No 10200
+    // Bind the socket
     bind(sockfd,(struct sockaddr *)&seraddr,sizeof(seraddr));
     //Create a connection queue and wait for clients
     listen(sockfd,5);
